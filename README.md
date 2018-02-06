@@ -1,5 +1,5 @@
-## Multi-container app using Docker Compose
-This sample shows how Docker Compose can be used for multi container app. Two containers include 1) Sprintboot based business logic 2) Postgres DB
+## Multi-container, multi-host app using Docker Compose and Docker Swarm
+This sample shows how Docker Compose and Docker Swarm can be used for multi-container, multi-host app. Two containers include 1) NodeJS app 2) HAProxy
 
 ### Local deployment
 - Download this sample SpringBoot application
