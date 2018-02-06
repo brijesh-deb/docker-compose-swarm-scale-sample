@@ -1,0 +1,33 @@
+version: '3'
+services:
+ web:
+   image: nodejs-docker-demo
+   ports: 
+       - 8080
+   environment:
+       - SERVICE_PORTS=8080
+   deploy:
+     replicas: 3
+   networks:
+       - mynetwork
+ lb:
+    image: dockercloud/haproxy
+    depends_on:
+        - web
+    environment:
+        - BALANCE=leastconn
+    ports:
+        - 80:80
+    networks:
+        - mynetwork
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock 
+    deploy:
+        placement:
+          constraints: [node.role == manager]
+networks:
+    mynetwork:
+      driver: overlay
+       
+volumes:
+    sample_db: {}
