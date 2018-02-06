@@ -1,7 +1,7 @@
 version: '3'
 services:
  web:
-   image: nodejs-docker-demo
+   image: brijeshdeb/nodejs-docker-demo
    ports: 
        - 8080
    environment:
