@@ -16,7 +16,7 @@ This sample shows how Docker Compose and Docker Swarm can be used for multi-cont
 	- [public ip address] on browser
 
 ### Host 2
-- [Install docker](https://gist.github.com/brijesh-deb/c223c7d8e7d14e83d96001e87330642a)
+- [Install docker on an EC2 instance](https://gist.github.com/brijesh-deb/c223c7d8e7d14e83d96001e87330642a)
 - [Install docker compose](https://gist.github.com/brijesh-deb/fb6d99e577d73b24f3dfcc35ad745ad1)
 - Add TCP/2377 in security group of EC2 instance
 - Execute command in initial manager node (node 1) to get manager token
