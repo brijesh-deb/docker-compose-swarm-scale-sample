@@ -5,7 +5,7 @@ This sample shows how Docker Compose and Docker Swarm can be used for multi-cont
 - [Install docker on an EC2 instance](https://gist.github.com/brijesh-deb/c223c7d8e7d14e83d96001e87330642a)
 - [Install Docker Compose](https://gist.github.com/brijesh-deb/fb6d99e577d73b24f3dfcc35ad745ad1)
 - Add TCP/2377 in security group of EC2 instance
-- Copy docker-compose.yml to "app" folder
+- Creare a folder "app" and copy docker-compose.yml to that folder
 - Run following command
 	-	docker swarm init --advertise-addr [private ip of ec2]:2377 --listen-addr [private ip of ec2]:2377
 	- docker stack deploy --compose-file=docker-compose.yml prod
