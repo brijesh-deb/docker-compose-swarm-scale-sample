@@ -22,6 +22,9 @@ This sample shows how Docker Compose and Docker Swarm can be used for multi-cont
 - Execute command in initial manager node (node 1) to get manager token
 	- docker swarm join-token manager
 - Execute worker token in current node
+	- docker swarm join --token SWMTKN-1-xxxxxxxxxxxxxxxxxxxxx [private ip of earlier ec2 instance]:2377 [ Sample]
+- Run following command	
 	- docker node ls (will show 2 nodes)
 	- docker service scale prod_web=7
 	- docker service ls (should show 7 prod_web)
+	- docker service ps prod_web (should prod_web across swarm nodes) 
